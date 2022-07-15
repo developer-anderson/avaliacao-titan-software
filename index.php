@@ -26,7 +26,7 @@ $sale = 0;
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Tabelas Responsivas</title>
+    <title>Desafio</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -35,6 +35,7 @@ $sale = 0;
     <div class="center">
         <div class="card">
             <h2>Filtro de Produtos</h2>
+            <a href="novo_produto.php">Incluir produto</a>
             <div class="content">
                 <form class="form-inline" action="" method="post" name="produt">
                     <label for="name">Nome do produto:</label>
@@ -65,6 +66,7 @@ $sale = 0;
                             <th>Desconto</th>
                             <th>Preço + Desc</th>
                             <th>#</th>
+                            <th>#</th>
                         </tr>
                     </thead>
 
@@ -87,6 +89,7 @@ $sale = 0;
                                 <td><?php echo ($sale); ?></td>
                                 <td><?php echo "R$ " . (number_format($price, 2, ",", '.')) ?></td>
                                 <td><button type="button" onclick="excluirProduto(<?php echo ($row['product_id']); ?>)">Excluir</button></td>
+                                <td><a href="<?php echo("editar.php?product_id=".$row['product_id']); ?>">Editar</button></td>
                             </tr>
                         <?php } ?>
 
